@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="survey.css">
+    <title>Survey Form</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="register">
+            <h2>Survey Form</h2>
+            <form id="register" method="post">
+                <label>First Name:</label><br>
+                <div class="name">
+                    <input type="text" name="fname" id="fname" placeholder="Enter your First Name" class="name"
+                        required>
+                </div><br><br>
+                <label>Last Name:</label><br>
+                <div class="name">
+                    <input type="text" name="lname" id="lname" placeholder="Enter your Last Name" class="name" required>
+                </div><br><br>
+                <label>Date of Birth:</label><br>
+                <input type="date" id="date" required><br><br>
+                <label for="countrySelect">Country:</label><br>
+                <select id="countrySelect"></select><br><br>
+                <label>Gender:</label><br>
+                <div class="gender">
+                    <input type="radio" name="gender" value="Male" required> <span id="male">Male</span><br>
+                    <input type="radio" name="gender" value="Female" required> <span id="female">Female</span><br>
+                </div><br><br>
+                <label>E-Mail:</label><br>
+                <div class="name">
+                    <input type="email" name="email" id="email" class="name" placeholder="Enter Valid E-Mail" required>
+                </div><br><br>
+                <label>Profession:</label><br>
+                <div class="name">
+                    <input type="text" name="profession" id="profession" placeholder="Enter your Profession"
+                        class="name" required>
+                </div><br><br>
+                <label>Mobile Number:</label><br>
+                <div class="name">
+                    <input type="text" name="mobileNumber" id="mobileNumber" placeholder="Enter your Phone Number"
+                        class="name" required>
+                </div><br><br>
+                <!-- <input type="submit" id="submit" value="Submit">
+                <input type="reset" id="reset"> -->
+                <div class="buttons">
+                    <button type="submit">Submit</button>
+                    <button type="reset" onclick="resetForm()">Reset</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="popup">
+        <div id="popupContent">
+            <h3>Form Data</h3>
+            <ul>
+                <li><strong>First Name:</strong> <span id="popupFirstName"></span></li>
+                <li><strong>Last Name:</strong> <span id="popupLastName"></span></li>
+                <li><strong>Date of Birth:</strong> <span id="popupDateOfBirth"></span></li>
+                <li><strong>Country:</strong> <span id="popupCountry"></span></li>
+                <li><strong>Gender:</strong> <span id="popupGender"></span></li>
+                <li><strong>Email:</strong> <span id="popupEmail"></span></li>
+                <li><strong>Profession:</strong> <span id="popupProfession"></span></li>
+                <li><strong>Mobile Number:</strong> <span id="popupMobileNumber"></span></li>
+            </ul>
+            <button id="closePopup">Close</button>
+        </div>
+    </div>
+
+    <script src="survey.js"></script>
+</body>
+
+</html>
